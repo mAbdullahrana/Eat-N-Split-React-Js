@@ -51,6 +51,8 @@ export default function App() {
           : friend
       )
     );
+
+    setSelectedFriend(null);
   }
 
   const [friendName, setFriendName] = useState("");
