@@ -102,6 +102,7 @@ export default function App() {
           selectedFriend={selectedFriend}
           friends={friends}
           onSplit={handleSplitSubmit}
+          key={selectedFriend.name}
         />
       )}
     </div>
@@ -188,7 +189,11 @@ function FormSplitBill({ selectedFriend, friends, onSplit }) {
     onSplit(paying === "user" ? friendBill : -expense);
   }
   return (
-    <form className="form-split-bill" onSubmit={handleSubmit}>
+    <form
+      className="form-split-bill"
+      onSubmit={handleSubmit}
+     
+    >
       <h2>Split A Bill With {selectedFriend.name}</h2>
 
       <label>☠ Bill Value</label>
